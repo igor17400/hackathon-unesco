@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 import "./Landing.css";
 
-import pedhua_mainPage from "../../img/pedhua_mainPage.png";
 import cellphone from "../../img/Mobile.png";
-import meghan from "../../img/meghan.jpg";
 
 class Landing extends Component {
   render() {
