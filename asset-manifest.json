@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/hackathon-unesco/static/css/main.8ed55c49.chunk.css",
-    "main.js": "/hackathon-unesco/static/js/main.43392ffe.chunk.js",
+    "main.js": "/hackathon-unesco/static/js/main.855419ad.chunk.js",
     "runtime-main.js": "/hackathon-unesco/static/js/runtime-main.700428b4.js",
-    "static/css/2.d4d00375.chunk.css": "/hackathon-unesco/static/css/2.d4d00375.chunk.css",
-    "static/js/2.ea6eb65b.chunk.js": "/hackathon-unesco/static/js/2.ea6eb65b.chunk.js",
+    "static/css/2.762fb3d0.chunk.css": "/hackathon-unesco/static/css/2.762fb3d0.chunk.css",
+    "static/js/2.62c698eb.chunk.js": "/hackathon-unesco/static/js/2.62c698eb.chunk.js",
     "index.html": "/hackathon-unesco/index.html",
-    "precache-manifest.11e73971aa8629b5e5f470e774354c90.js": "/hackathon-unesco/precache-manifest.11e73971aa8629b5e5f470e774354c90.js",
+    "precache-manifest.4cb30e41ebe95cf26fbc7656ffc1089b.js": "/hackathon-unesco/precache-manifest.4cb30e41ebe95cf26fbc7656ffc1089b.js",
     "service-worker.js": "/hackathon-unesco/service-worker.js",
-    "static/js/2.ea6eb65b.chunk.js.LICENSE.txt": "/hackathon-unesco/static/js/2.ea6eb65b.chunk.js.LICENSE.txt",
+    "static/js/2.62c698eb.chunk.js.LICENSE.txt": "/hackathon-unesco/static/js/2.62c698eb.chunk.js.LICENSE.txt",
     "static/media/Mobile.png": "/hackathon-unesco/static/media/Mobile.b9f62f7a.png",
     "static/media/Landing.css": "/hackathon-unesco/static/media/samantha.88f86e01.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.700428b4.js",
-    "static/css/2.d4d00375.chunk.css",
-    "static/js/2.ea6eb65b.chunk.js",
+    "static/css/2.762fb3d0.chunk.css",
+    "static/js/2.62c698eb.chunk.js",
     "static/css/main.8ed55c49.chunk.css",
-    "static/js/main.43392ffe.chunk.js"
+    "static/js/main.855419ad.chunk.js"
   ]
 }
