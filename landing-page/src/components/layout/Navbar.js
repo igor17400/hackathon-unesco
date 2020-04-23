@@ -11,7 +11,7 @@ class NavbarComponent extends Component {
       <div>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
           <Navbar.Brand
-            href="/hackathon-unesco/"
+            href="/"
             style={{
               color: "rgb(203, 11, 101)",
               fontFamily: "Arial",

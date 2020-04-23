@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
+import Statistics from "./components/Statistics/Statistics"
+import AboutUs from "./components/InfoPage/AboutUs"
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +15,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar />
-          <Route exact path="/hackathon-unesco/" component={Landing} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/statistics" component={Statistics} />
         </div>
       </Router>
     );
