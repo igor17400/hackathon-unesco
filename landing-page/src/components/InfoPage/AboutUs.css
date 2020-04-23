@@ -1,0 +1,17 @@
+.jumbotron-box2 {
+  background-color: rgb(0, 0, 0);
+}
+
+.text-azure {
+  color: azure;
+  text-align: center;
+}
+
+.text-pink {
+  color: rgb(203, 11, 101);
+  text-align: center;
+}
+
+.image-config{
+    border-radius: 50%;
+}

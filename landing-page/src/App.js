@@ -12,12 +12,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Navbar />
           <Route exact path="/" component={Landing} />
-          <Route exact path="/aboutus" component={AboutUs} />
-          <Route exact path="/statistics" component={Statistics} />
+          <Route path="/aboutus" component={AboutUs} />
+          <Route path="/statistics" component={Statistics} />
         </div>
       </Router>
     );
