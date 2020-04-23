@@ -66,7 +66,7 @@ class AboutUs extends Component {
                       <h1 className="text-pink">Cecília Cipriano</h1>
                       <p className="text-azure">Team member</p>
                       <p className="text-azure">GPP student in Univeristy of Brasilia</p>
-                      <p className="text-pink">ceci@gmail.com</p>
+                      <p className="text-pink">cecilia.ocipriano@gmail.com</p>
                     </Col>
                   </Row>
                 </Container>
