@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hackathon-unesco/precache-manifest.e5c2eae67d79d6e1c8d53c6440f80055.js"
+  "/hackathon-unesco/precache-manifest.e9f1e86cb224719a609d6d85ebc7a755.js"
 );
 
 self.addEventListener('message', (event) => {

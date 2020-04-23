@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ce5ae9751006ce069195fd1f221df1d",
+    "revision": "71f128456518e096b5071f6941d992e6",
     "url": "/hackathon-unesco/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hackathon-unesco/static/css/2.762fb3d0.chunk.css"
   },
   {
-    "revision": "ecdce4e1ac5ae9d640da",
+    "revision": "98d8bd3feb606c3a2b03",
     "url": "/hackathon-unesco/static/css/main.8ed55c49.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hackathon-unesco/static/js/2.14c623d8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ecdce4e1ac5ae9d640da",
-    "url": "/hackathon-unesco/static/js/main.ce791d04.chunk.js"
+    "revision": "98d8bd3feb606c3a2b03",
+    "url": "/hackathon-unesco/static/js/main.054f6712.chunk.js"
   },
   {
     "revision": "886766b941113e498a8d",
