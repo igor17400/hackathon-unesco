@@ -8,9 +8,7 @@ import {
   YAxis,
   VerticalGridLines,
   HorizontalGridLines,
-  VerticalRectSeries,
-  LineSeries,
-  VerticalBarSeries,
+  VerticalRectSeries
 } from "react-vis";
 
 import "./Statistics.css";
