@@ -52,7 +52,7 @@ class Landing extends Component {
                     <Col xs={6}></Col>
                     <Col>
                       <h1 className="text-dark">
-                        Recreating <span className="text-pink">Woman</span>{" "}
+                        Recreating <span className="text-pink">Women's</span>{" "}
                         security
                       </h1>
                     </Col>

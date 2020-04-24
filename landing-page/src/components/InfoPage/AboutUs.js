@@ -29,7 +29,7 @@ class AboutUs extends Component {
                     <Col>
                       <h1 className="text-pink">Vitória Sernégio</h1>
                       <p className="text-azure">Team member</p>
-                      <p className="text-azure">Law student in Univeristy of Brasilia</p>
+                      <p className="text-azure">Law student at University of Brasilia</p>
                       <p className="text-pink">vitoriabsernegio@gmail.com</p>
                     </Col>
                     <Col xs={3}></Col>
@@ -65,7 +65,7 @@ class AboutUs extends Component {
                     <Col>
                       <h1 className="text-pink">Cecília Cipriano</h1>
                       <p className="text-azure">Team member</p>
-                      <p className="text-azure">GPP student in Univeristy of Brasilia</p>
+                      <p className="text-azure">Managment of public policies student at University of Brasilia</p>
                       <p className="text-pink">cecilia.ocipriano@gmail.com</p>
                     </Col>
                   </Row>
@@ -81,7 +81,7 @@ class AboutUs extends Component {
                     <Col>
                       <h1 className="text-pink">Igor Lima</h1>
                       <p className="text-azure">Developer</p>
-                      <p className="text-azure">Electrical engineering student in Univeristy of Brasilia</p>
+                      <p className="text-azure">Electrical engineering student at University of Brasilia</p>
                       <p className="text-pink">igorlima1740@gmail.com</p>
                     </Col>
                     <Col xs={3}></Col>
