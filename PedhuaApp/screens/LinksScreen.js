@@ -13,7 +13,8 @@ import { RectButton, ScrollView } from "react-native-gesture-handler";
 import { Calendar, CalendarList, Agenda } from "react-native-calendars";
 
 var aggression = [];
-var colors = ["red"];
+var colors = [];
+var type_agg = [];
 
 export default class LinksScreen extends Component {
   constructor(props) {
@@ -24,21 +25,18 @@ export default class LinksScreen extends Component {
   }
 
   handleButtonClickRed = (e) => {
-    colors.push("red")
+    colors.push("red");
+    type_agg.push("physical");
   };
 
   handleButtonClickYellow = (e) => {
-    colors.push("#CCCC00")
-    // this.setState({
-    //   color: "#CCCC00",
-    // });
+    colors.push("#CCCC00");
+    type_agg.push("moral");
   };
 
   handleButtonClickPurple = (e) => {
-    colors.push("purple")
-    // this.setState({
-    //   color: "purple",
-    // });
+    colors.push("purple");
+    type_agg.push("sexual");
   };
 
   componentDidMount() {
@@ -48,7 +46,7 @@ export default class LinksScreen extends Component {
   // call function after you successfully get value in nextDay array
 
   anotherFunc = () => {
-    var i = 0
+    var i = 0;
     var obj = aggression.reduce(
       (c, v) =>
         Object.assign(c, {
@@ -69,7 +67,7 @@ export default class LinksScreen extends Component {
         <Calendar
           onDayPress={(day) => {
             if (aggression.indexOf(day.dateString) === -1) {
-              aggression.push(`${day.dateString}`), console.log(aggression);
+              aggression.push(`${day.dateString}`), console.log(type_agg);
               this.anotherFunc();
             }
           }}
@@ -106,21 +104,27 @@ export default class LinksScreen extends Component {
             textDayHeaderFontSize: 16,
           }}
         />
-        <Button
-          title="Vermelho"
-          color="red"
-          onPress={this.handleButtonClickRed}
-        />
-        <Button
-          title="Amarelo"
-          color="yellow"
-          onPress={this.handleButtonClickYellow}
-        />
-        <Button
-          title="Roxo"
-          color="#f194ff"
-          onPress={this.handleButtonClickPurple}
-        />
+        <View style={styles.buttons}>
+          <Button
+            title="Menstruation"
+            color="white"
+            onPress={this.handleButtonClickRed}
+          />
+        </View>
+        <View style={styles.buttons}>
+          <Button
+            title="Ovulation"
+            color="white"
+            onPress={this.handleButtonClickYellow}
+          />
+        </View>
+        <View style={styles.buttons}>
+          <Button
+            title="Secretory phase"
+            color="white"
+            onPress={this.handleButtonClickPurple}
+          />
+        </View>
       </View>
     );
   }
@@ -152,5 +156,16 @@ const styles = StyleSheet.create({
     fontSize: 15,
     alignSelf: "flex-start",
     marginTop: 1,
+  },
+  buttons: {
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: "rgb(203, 11, 101)",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#fff",
   },
 });
