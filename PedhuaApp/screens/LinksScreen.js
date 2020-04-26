@@ -1,20 +1,45 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as WebBrowser from "expo-web-browser";
 import React, { useState, Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Button,
+  View,
+  SafeAreaView,
+  Text,
+  Alert,
+} from "react-native";
 import { RectButton, ScrollView } from "react-native-gesture-handler";
 import { Calendar, CalendarList, Agenda } from "react-native-calendars";
 
 var aggression = [];
+var colors = ["red"];
 
 export default class LinksScreen extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       marked: null,
     };
   }
+
+  handleButtonClickRed = (e) => {
+    colors.push("red")
+  };
+
+  handleButtonClickYellow = (e) => {
+    colors.push("#CCCC00")
+    // this.setState({
+    //   color: "#CCCC00",
+    // });
+  };
+
+  handleButtonClickPurple = (e) => {
+    colors.push("purple")
+    // this.setState({
+    //   color: "purple",
+    // });
+  };
 
   componentDidMount() {
     this.anotherFunc();
@@ -23,8 +48,16 @@ export default class LinksScreen extends Component {
   // call function after you successfully get value in nextDay array
 
   anotherFunc = () => {
+    var i = 0
     var obj = aggression.reduce(
-      (c, v) => Object.assign(c, { [v]: { selected: true, marked: true, selectedColor: 'blue'} }),
+      (c, v) =>
+        Object.assign(c, {
+          [v]: {
+            selected: true,
+            marked: true,
+            selectedColor: colors[i++],
+          },
+        }),
       {}
     );
     this.setState({ marked: obj });
@@ -66,12 +99,27 @@ export default class LinksScreen extends Component {
             dotColor: "#00adf5",
             selectedDotColor: "#ffffff",
             arrowColor: "orange",
-            monthTextColor: "blue",
+            monthTextColor: "rgb(203, 11, 101)",
             textMonthFontWeight: "bold",
             textDayFontSize: 16,
             textMonthFontSize: 16,
             textDayHeaderFontSize: 16,
           }}
+        />
+        <Button
+          title="Vermelho"
+          color="red"
+          onPress={this.handleButtonClickRed}
+        />
+        <Button
+          title="Amarelo"
+          color="yellow"
+          onPress={this.handleButtonClickYellow}
+        />
+        <Button
+          title="Roxo"
+          color="#f194ff"
+          onPress={this.handleButtonClickPurple}
         />
       </View>
     );
