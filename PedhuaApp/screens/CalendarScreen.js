@@ -1,53 +1,138 @@
-import { Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import { Ionicons } from "@expo/vector-icons";
+import * as WebBrowser from "expo-web-browser";
+import React, { useState, Component } from "react";
+import {
+  StyleSheet,
+  Button,
+  View,
+  SafeAreaView,
+  Text,
+  Alert,
+} from "react-native";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
+import { Calendar, CalendarList, Agenda } from "react-native-calendars";
 
-export default function CalendarScreen() {
-  return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
-      />
+var aggression = [];
+var colors = [];
+var type_agg = [];
 
-      <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
-      />
+export default class CalendarScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      marked: null,
+    };
+  }
 
-      <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
-        isLastOption
-      />
-    </ScrollView>
-  );
-}
+  handleButtonClickRed = (e) => {
+    colors.push("red");
+    type_agg.push("physical_aggression");
+  };
 
-function OptionButton({ icon, label, onPress, isLastOption }) {
-  return (
-    <RectButton style={[styles.option, isLastOption && styles.lastOption]} onPress={onPress}>
-      <View style={{ flexDirection: 'row' }}>
-        <View style={styles.optionIconContainer}>
-          <Ionicons name={icon} size={22} color="rgba(0,0,0,0.35)" />
+  handleButtonClickYellow = (e) => {
+    colors.push("#CCCC00");
+    type_agg.push("moral_aggression");
+  };
+
+  handleButtonClickPurple = (e) => {
+    colors.push("purple");
+    type_agg.push("sexual_aggression");
+  };
+
+  componentDidMount() {
+    this.anotherFunc();
+  }
+
+  // call function after you successfully get value in nextDay array
+
+  anotherFunc = () => {
+    var i = 0;
+    var obj = aggression.reduce(
+      (c, v) =>
+        Object.assign(c, {
+          [v]: {
+            selected: true,
+            marked: true,
+            selectedColor: colors[i++],
+          },
+        }),
+      {}
+    );
+    this.setState({ marked: obj });
+  };
+
+  render() {
+    return (
+      <View>
+        <Calendar
+          onDayPress={(day) => {
+            if (aggression.indexOf(day.dateString) === -1) {
+              aggression.push(`${day.dateString}`), console.log(type_agg);
+              this.anotherFunc();
+            }
+          }}
+          minDate={"2018-05-24"}
+          onMonthChange={(month) => {
+            console.log("month changed", month);
+          }}
+          hideArrows={false}
+          hideExtraDays={true}
+          disableMonthChange={false}
+          firstDay={1}
+          hideDayNames={false}
+          showWeekNumbers={false}
+          onPressArrowLeft={(substractMonth) => substractMonth()}
+          onPressArrowRight={(addMonth) => addMonth()}
+          markedDates={this.state.marked}
+          theme={{
+            backgroundColor: "#ffffff",
+            calendarBackground: "#ffffff",
+            textSectionTitleColor: "#b6c1cd",
+            selectedDayBackgroundColor: "#00adf5",
+            selectedDayTextColor: "#ffffff",
+            todayTextColor: "#00adf5",
+            dayTextColor: "#2d4150",
+            textDisabledColor: "#d9e1e8",
+            dotColor: "#00adf5",
+            selectedDotColor: "#ffffff",
+            arrowColor: "orange",
+            monthTextColor: "rgb(203, 11, 101)",
+            textMonthFontWeight: "bold",
+            textDayFontSize: 16,
+            textMonthFontSize: 16,
+            textDayHeaderFontSize: 16,
+          }}
+        />
+        <View style={styles.buttons}>
+          <Button
+            title="Menstruation"
+            color="white"
+            onPress={this.handleButtonClickRed}
+          />
         </View>
-        <View style={styles.optionTextContainer}>
-          <Text style={styles.optionText}>{label}</Text>
+        <View style={styles.buttons}>
+          <Button
+            title="Ovulation"
+            color="white"
+            onPress={this.handleButtonClickYellow}
+          />
+        </View>
+        <View style={styles.buttons}>
+          <Button
+            title="Secretory phase"
+            color="white"
+            onPress={this.handleButtonClickPurple}
+          />
         </View>
       </View>
-    </RectButton>
-  );
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fafafa',
+    backgroundColor: "#fafafa",
   },
   contentContainer: {
     paddingTop: 15,
@@ -56,19 +141,30 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   option: {
-    backgroundColor: '#fdfdfd',
+    backgroundColor: "#fdfdfd",
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: 0,
-    borderColor: '#ededed',
+    borderColor: "#ededed",
   },
   lastOption: {
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   optionText: {
     fontSize: 15,
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
     marginTop: 1,
+  },
+  buttons: {
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: "rgb(203, 11, 101)",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#fff",
   },
 });

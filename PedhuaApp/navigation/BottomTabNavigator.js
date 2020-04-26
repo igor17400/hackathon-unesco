@@ -5,6 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
 import LinksScreen from "../screens/LinksScreen";
+import CalendarScreen from '../screens/CalendarScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = "Home";
@@ -33,8 +34,8 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Calendar"
+        component={CalendarScreen}
         options={{
           title: "Mentrual calendar",
           tabBarIcon: ({ color, size }) => (
@@ -44,7 +45,7 @@ export default function BottomTabNavigator({ navigation, route }) {
       />
       <BottomTab.Screen
         name="QnA"
-        component={HomeScreen}
+        component={LinksScreen}
         options={{
           title: "QnA",
           tabBarIcon: ({ color, size }) => (
@@ -62,8 +63,10 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case "Home":
-      return "QnA for mentrual doubts";
-    case "Links":
-      return "Calendar to mark mentrual events";
+      return "Our mission is to help women";
+    case "Calendar":
+      return "Calendar to mark menstrual events";
+    case "QnA":
+      return "Please ask us anything"
   }
 }
