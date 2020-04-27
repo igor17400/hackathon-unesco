@@ -1,6 +1,6 @@
 # Pedhua
 
-## Video explaining the idea --> https://www.youtube.com/watch?v=qZ6hH1B6YdI
+## Pitch video explaining the idea with gifs demonstrating the APP and our chatbot developed using IBM Watson --> https://www.youtube.com/watch?v=qZ6hH1B6YdI
 
 ## In this project we have three folders
 
