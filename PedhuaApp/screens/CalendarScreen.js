@@ -31,7 +31,7 @@ export default class CalendarScreen extends Component {
 
   handleButtonClickYellow = (e) => {
     colors.push("#CCCC00");
-    type_agg.push("moral_aggression");
+    type_agg.push("verbal_aggression");
   };
 
   handleButtonClickPurple = (e) => {
