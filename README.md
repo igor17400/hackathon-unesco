@@ -1,5 +1,7 @@
 # Pedhua
 
+## Video explaining the idea --> https://www.youtube.com/watch?v=qZ6hH1B6YdI
+
 ## In this project we have three folders
 
 ### PedhuaApp
